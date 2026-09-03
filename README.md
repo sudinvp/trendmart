@@ -84,14 +84,19 @@ See [/docs/DECISIONS.md](docs/DECISIONS.md) for the full log.
 - [X] v0.4 — Wire Cart page to backend cart so it persists across devices
 - [ ] v1.0 — Public deploy
 
-## Code style
+## Code Style
 
-This repository follows the [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html) for the backend and the [Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html) for the frontend.
+The project follows standard Java and JavaScript coding conventions with consistent naming, indentation, and readable code structure.
 
 ## Contributing
 
-PRs welcome. Run the test suite before submitting.
+Contributions are welcome. If you would like to improve the project:
+
+1. Fork the repository.
+2. Create a new branch for your changes.
+3. Make and test your changes.
+4. Submit a pull request with a clear description of the changes.
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT License — see [LICENSE](LICENSE).
