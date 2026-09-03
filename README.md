@@ -81,7 +81,7 @@ See [/docs/DECISIONS.md](docs/DECISIONS.md) for the full log.
 - [x] v0.1 — Product CRUD, browsing, local cart
 - [x] v0.2 — JWT auth, role separation (USER/ADMIN), route protection
 - [x] v0.3 — Database-backed per-user cart (parallel to local cart)
-- [ ] v0.4 — Wire Cart page to backend cart so it persists across devices
+- [X] v0.4 — Wire Cart page to backend cart so it persists across devices
 - [ ] v1.0 — Public deploy
 
 ## Code style
