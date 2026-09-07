@@ -29,7 +29,9 @@ export const AppProvider = ({ children }) => {
       setCart(updatedCart);
       localStorage.setItem('cart', JSON.stringify(updatedCart));
     } else {
-      const updatedCart = [...cart, { ...product, quantity: 1 }];
+      // Keep the product's real stock under "stock" so it isn't overwritten
+      // by the cart's own "quantity" (how many of this item are in the cart).
+      const updatedCart = [...cart, { ...product, stock: product.quantity, quantity: 1 }];
       setCart(updatedCart);
       localStorage.setItem('cart', JSON.stringify(updatedCart));
     }
@@ -45,7 +47,7 @@ export const AppProvider = ({ children }) => {
 
   const refreshData = async () => {
     try {
-      const response = await axios.get("/products");
+      const response = await axios.get("/product");
       setData(response.data);
     } catch (error) {
       setIsError(error.message);

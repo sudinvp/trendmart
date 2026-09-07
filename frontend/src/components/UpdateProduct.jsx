@@ -14,8 +14,8 @@ const UpdateProduct = () => {
     price: "",
     category: "",
     releaseDate: "",
-    productAvailable: false,
-    stockQuantity: "",
+    available: false,
+    quantity: "",
   });
 
   useEffect(() => {
@@ -169,12 +169,12 @@ const UpdateProduct = () => {
               id="category"
             >
               <option value="">Select category</option>
-              <option value="laptop">Laptop</option>
-              <option value="headphone">Headphone</option>
-              <option value="mobile">Mobile</option>
-              <option value="electronics">Electronics</option>
-              <option value="toys">Toys</option>
-              <option value="fashion">Fashion</option>
+              <option value="Laptop">Laptop</option>
+              <option value="Headphone">Headphone</option>
+              <option value="Mobile">Mobile</option>
+              <option value="Electronics">Electronics</option>
+              <option value="Toys">Toys</option>
+              <option value="Fashion">Fashion</option>
             </select>
           </div>
 
@@ -186,10 +186,10 @@ const UpdateProduct = () => {
               type="number"
               className="form-control"
               onChange={handleChange}
-              placeholder={product.stockQuantity}
-              value={updateProduct.stockQuantity}
-              name="stockQuantity"
-              id="stockQuantity"
+              placeholder={product.quantity}
+              value={updateProduct.quantity}
+              name="quantity"
+              id="quantity"
             />
           </div>
           <div className="col-md-8">
@@ -221,11 +221,11 @@ const UpdateProduct = () => {
               <input
                 className="form-check-input"
                 type="checkbox"
-                name="productAvailable"
+                name="available"
                 id="gridCheck"
-                checked={updateProduct.productAvailable}
+                checked={updateProduct.available}
                 onChange={(e) =>
-                  setUpdateProduct({ ...updateProduct, productAvailable: e.target.checked })
+                  setUpdateProduct({ ...updateProduct, available: e.target.checked })
                 }
               />
               <label className="form-check-label">Product Available</label>

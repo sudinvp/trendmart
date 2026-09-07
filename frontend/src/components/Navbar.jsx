@@ -26,7 +26,7 @@ const Navbar = ({ onSelectCategory, onSearch }) => {
 
   const fetchData = async (value) => {
     try {
-      const response = await axios.get("http://localhost:8080/api/products");
+      const response = await axios.get("http://localhost:8080/api/product");
       setSearchResults(response.data);
       console.log(response.data);
     } catch (error) {
@@ -87,6 +87,7 @@ const Navbar = ({ onSelectCategory, onSearch }) => {
   const handleCategorySelect = (category) => {
     setSelectedCategory(category);
     onSelectCategory(category);
+    navigate("/");
   };
   const handleLogout = () => {
     logout();
@@ -116,8 +117,16 @@ const Navbar = ({ onSelectCategory, onSearch }) => {
       <header>
         <nav className="navbar navbar-expand-lg fixed-top">
           <div className="container-fluid">
-            <a className="navbar-brand">
-              Telusko
+            <a
+              className="navbar-brand"
+              href="/"
+              onClick={(e) => {
+                e.preventDefault();
+                navigate("/");
+              }}
+              style={{ cursor: "pointer" }}
+            >
+              TrendMart
             </a>
             <button
               className="navbar-toggler"
@@ -136,7 +145,15 @@ const Navbar = ({ onSelectCategory, onSearch }) => {
             >
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="/">
+                  <a
+                    className="nav-link active"
+                    aria-current="page"
+                    href="/"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      navigate("/");
+                    }}
+                  >
                     Home
                   </a>
                 </li>
@@ -151,8 +168,9 @@ const Navbar = ({ onSelectCategory, onSearch }) => {
                 <li className="nav-item dropdown">
                   <a
                     className="nav-link dropdown-toggle"
-                    href="/"
+                    href="#"
                     role="button"
+                    onClick={(e) => e.preventDefault()}
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
