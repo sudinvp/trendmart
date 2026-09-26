@@ -86,7 +86,7 @@ See [/docs/DECISIONS.md](docs/DECISIONS.md) for the full log.
 
 ## Code Style
 
-The project follows standard Java and JavaScript coding conventions with consistent naming, indentation, and readable code structure.
+The project follows standard Java and JavaScript coding conventions with consistent naming, indentation, and readable code structure only.
 
 ## Contributing
 
